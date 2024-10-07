@@ -18,7 +18,7 @@ services:
       context: ./backend
       dockerfile: go.dockerfile
     environment:
-      DATABASE_URL: "postgres://postgres:postgres@db:5432/postgres?sslmode=disable"
+      DATABASE_URL: "postgres://<YOUR_CUSTOM_USERNAME>:<YOUR_CUSTOM_PASSWORD>@db:5432/<YOUR_CUSTOM_DATABASE_NAME>?sslmode=disable"
     ports:
       - "8000:8000"
     depends_on:
@@ -27,9 +27,9 @@ services:
     container_name: db
     image: postgres:13
     environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: postgres
+      POSTGRES_USER: <YOUR_CUSTOM_USERNAME>
+      POSTGRES_PASSWORD: <YOUR_CUSTOM_PASSWORD>
+      POSTGRES_DB: <YOUR_CUSTOM_DATABASE_NAME>
     ports:
       - 5432:5432
     volumes:
