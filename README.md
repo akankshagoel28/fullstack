@@ -6,7 +6,7 @@
 3. You need to have NodeJs@latest installed
 ## To run the the application
 1. Replace all the <> brackets with your custom username, password and db name in the compose.yaml file
-2. You need to clone the this repo using
+2. You need to first fork this repo and then clone it using
 > git clone <REPOSITORY_URL>
 3. Then run
 > docker compose build
